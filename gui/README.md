@@ -1,0 +1,42 @@
+# Lektor GUI
+
+## ToDos:
+
+ - [x] Add CI for all target platforms
+ - [ ] Add "Create Project" dialog
+ - [ ] Bundle Python, imagemagick, lektor with final bundles
+     - [ ] macOS
+     - [ ] Windows
+     - [ ] Linux
+ - [ ] Write tests
+     - * https://www.electronjs.org/spectron + https://github.com/avajs/ava ?
+     - [ ] Open existing project
+     - [ ] Edit page content
+     - [ ] Create new project (having 2 open projects)
+     - [ ] Close Project1
+     - [ ] Add new page to Project2
+     - [ ] Close Project2
+     - [ ] Check output of Project1
+     - [ ] Check output of Project2
+ - [ ] Flesh out renderer JS in dialogs
+     - [ ] Use react just like admin UI
+ - [ ] Remove menubar from open and create dialogs on Windows + Linux
+ - [ ] Track recently opened projects and display them in openProject dialog
+ - [ ] Enhance admin UI
+     - [ ] Integrate some functionality of admin UI?
+     - [ ] Add keyboard shortcuts like ⌘S to "Save Changes" in admin UI
+ - [ ] Register app to open *.lektorproject files
+     - [ ] macOS
+     - [ ] Windows
+     - [ ] Linux
+ - [ ] Register app to open *.lr files and associated project
+     - [ ] macOS
+     - [ ] Windows
+     - [ ] Linux
+ - [ ] Allow dragging *.lr and .lektorproject files on macOS tray to open
+ - [ ] Integrate i18n from Lektor admin code
+ - [ ] Add "Install command line tools" functionality
+ - [ ] Beatuify distribution packages
+     - [ ] App icon
+     - [ ] macOS dmg background
+     - [ ] Code signing (https://github.com/electron-userland/electron-osx-sign)
