@@ -5,6 +5,8 @@ import { app, BrowserWindow, webContents, dialog, ipcMain } from 'electron'
 import * as path from 'path'
 import { format as formatUrl } from 'url'
 
+import { openProject } from './project'
+
 import rendererentrypoints from '../common/rendererentrypoints'
 import { lektorProjectFilter } from '../common/filedialoghelpers'
 import { i18n } from '../common/i18n'
@@ -29,8 +31,6 @@ const main = () => {
     })
 
     createOpenProjectWindow()
-
-    console.log(app.getPath('appData'))
   })
 
   app.on('window-all-closed', () => {
@@ -49,11 +49,16 @@ const main = () => {
       properties: ['openFile']
     })
 
+    if (!result.canceled) {
+      console.log("Opening", result.filePaths)
+      openProject(result.filePaths[0])
+    }
+
     return result
   })
 }
 
-function getRendererIndexHTMLURL (entryPoint, args) {
+export function getRendererIndexHTMLURL (entryPoint, args) {
   const argument = encodeURIComponent(
     JSON.stringify({
       entryPoint: entryPoint,
@@ -107,4 +112,5 @@ function createOpenProjectWindow () {
   })
 }
 
+// set up main event-loop hooks and open first window
 main()

@@ -1,4 +1,5 @@
 export default {
   openProjectScreen: 'openProjectScreen',
-  newProjectScreen: 'newProjectScreen'
+  newProjectScreen: 'newProjectScreen',
+  waitForAdminBootup: 'waitForAdminBootup'
 }
