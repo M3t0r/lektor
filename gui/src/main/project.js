@@ -45,6 +45,8 @@ export function openProject (projectFilePath) {
 
   window.loadURL(getRendererIndexHTMLURL(rendererentrypoints.waitForAdminBootup))
 
+  window.setRepresentedFilename(projectFilePath)
+
   window.webContents.on('did-finish-load', () => {
     window.show()
   })

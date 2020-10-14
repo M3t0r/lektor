@@ -4,6 +4,7 @@
 
  - [x] Add CI for all target platforms
  - [ ] Add "Create Project" dialog
+ - [ ] Enable right clicks in admin and preview pages
  - [ ] Bundle Python, imagemagick, lektor with final bundles
      - [ ] macOS
      - [ ] Windows
@@ -15,9 +16,12 @@
      - [ ] Create new project (having 2 open projects)
      - [ ] Close Project1
      - [ ] Add new page to Project2
+     - [ ] Upload image attachment
+     - [ ] Modify template to render it (to force use of imagemagick)
      - [ ] Close Project2
      - [ ] Check output of Project1
      - [ ] Check output of Project2
+     - [ ] Test plugins?
  - [ ] Flesh out renderer JS in dialogs
      - [ ] Use react just like admin UI
  - [ ] Remove menubar from open and create dialogs on Windows + Linux
